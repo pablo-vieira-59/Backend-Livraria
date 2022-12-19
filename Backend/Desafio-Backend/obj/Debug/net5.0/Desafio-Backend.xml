@@ -1,0 +1,334 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Desafio-Backend</name>
+    </assembly>
+    <members>
+        <member name="M:Desafio_Backend.Controllers.LivroController.Listar(Desafio_Backend.Domain.DTO.Livro.LivroFiltrosDto,System.Int32,System.Int32)">
+            <summary>
+            Obter Todos os Livros em Ordem Alfabetica. É possivel utilizar Filtros.
+            </summary>
+            <param name="filtros">Estrura Auxiliar Para Filtrar Resultados</param>
+            <param name="pagina">Numero da Página Atual</param>
+            <param name="numItensPorPagina">Quantidade de Itens na Página</param>
+            <returns>Lista de Livros Filtrados</returns>
+            <response code="200">Lista de Livros</response>
+            <response code="204">Nenhum Livro Encontrado</response>
+        </member>
+        <member name="M:Desafio_Backend.Controllers.LivroController.ObterPorId(System.Int32)">
+            <summary>
+            Obtem Livro.
+            </summary>
+            <param name="id">ID do Livro Cadastrado no Banco</param>
+            <returns>Detalhes do Livro</returns>
+            <response code="200">Detalhes do Livro</response>
+            <response code="204">Nenhum Livro Encontrado</response>
+            <response code="500">Erro Interno</response>
+        </member>
+        <member name="M:Desafio_Backend.Controllers.LivroController.ObterPorNome(System.String)">
+            <summary>
+            Obtem Livro.
+            </summary>
+            <param name="nome">Nome do Livro Cadastrado no Banco</param>
+            <returns>Detalhes do Livro</returns>
+            <response code="200">Detalhes do Livro</response>
+            <response code="204">Nenhum Livro Encontrado</response>
+            <response code="500">Erro Interno</response>
+        </member>
+        <member name="M:Desafio_Backend.Controllers.LivroController.Inserir(Desafio_Backend.Domain.DTO.Livro.LivroAdicionarDto)">
+            <summary>
+            Cadastro de Novos Livros
+            </summary>
+            <param name="livro">DTO de Dados do Livro Cadastrado no Banco</param>
+            <returns>Resultado da Operação</returns>
+            <response code="200">Dados do Livro</response>
+            <response code="204">Falha ao Cadastrar Livro.</response>
+            <response code="500">Erro Interno</response>
+        </member>
+        <member name="M:Desafio_Backend.Controllers.LivroController.Editar(System.Int32,Desafio_Backend.Domain.DTO.Livro.LivroEditarDto)">
+            <summary>
+            Cadastro de Novos Livros
+            </summary>
+            <param name="livro">DTO para Editar Livro</param>
+            <param name="id">ID do Livro Cadastrado no Banco</param>
+            <returns>Resultado da Operação</returns>
+            <response code="200">Livro Cadastrado</response>
+            <response code="400">Falha ao Editar Livro. Verificar Dados de Entrada</response>
+            <response code="500">Erro Interno</response>
+        </member>
+        <member name="M:Desafio_Backend.Controllers.LivroController.Deletar(System.Int32)">
+            <summary>
+            Remoção de Novos Livros
+            </summary>
+            <param name="id">ID do Livro Cadastrado no Banco</param>
+            <returns>Resultado da Operação</returns>
+            <response code="200">Livro Cadastrado</response>
+            <response code="400">Falha ao Deletar Livro. Verificar Dados de Entrada</response>
+            <response code="500">Erro Interno</response>
+        </member>
+        <member name="M:Desafio_Backend.Controllers.UsuarioController.Listar">
+            <summary>
+            Obter Todos os Usuarios.
+            </summary>
+            <returns>Lista de Usuarios</returns>
+            <response code="200">Lista de Usuarios</response>
+            <response code="204">Nenhum Usuario Encontrado</response>
+        </member>
+        <member name="M:Desafio_Backend.Controllers.UsuarioController.ObterPorId(System.Int32)">
+            <summary>
+            Obtem Usuario.
+            </summary>
+            <param name="id">ID do Usuario Cadastrado no Banco</param>
+            <returns>Detalhes do Usuario</returns>
+            <response code="200">Detalhes do Usuario</response>
+            <response code="204">Nenhum Usuario Encontrado</response>
+            <response code="500">Erro Interno</response>
+        </member>
+        <member name="M:Desafio_Backend.Controllers.UsuarioController.ObterPorNome(System.String)">
+            <summary>
+            Obtem Usuario
+            </summary>
+            <param name="nome">Nome do Usuario Cadastrado no Banco</param>
+            <returns>Detalhes do Usuario</returns>
+            <response code="200">Detalhes do Usuario</response>
+            <response code="204">Nenhum Usuario Encontrado</response>
+            <response code="500">Erro Interno</response>
+        </member>
+        <member name="M:Desafio_Backend.Controllers.UsuarioController.Inserir(Desafio_Backend.Domain.DTO.User.UserAdicionarDto)">
+            <summary>
+            Cadastro de Novos Usuarios
+            </summary>
+            <param name="usuario">DTO do Usuario para Cadastrar no Banco</param>
+            <returns>Resultado da Operação</returns>
+            <response code="200">Usuario Cadastrado</response>
+            <response code="500">Erro Interno</response>
+        </member>
+        <member name="M:Desafio_Backend.Controllers.UsuarioController.Login(Desafio_Backend.Domain.DTO.User.UserLoginDto)">
+            <summary>
+            Cadastro de Novos Usuarios
+            </summary>
+            <param name="usuario">DTO do Usuario para Logar no Sistema</param>
+            <returns>Resultado da Operação</returns>
+            <response code="200">Usuario Cadastrado</response>
+            <response code="500">Erro Interno</response>
+        </member>
+        <member name="T:Desafio_Backend.Domain.DTO.Livro.LivroAdicionarDto">
+            <summary>
+            Serve como estrutura de entrada para cadastrar a Classe Livro no Banco.
+            </summary>
+        </member>
+        <member name="P:Desafio_Backend.Domain.DTO.Livro.LivroAdicionarDto.nome">
+            <summary>
+            Nome do Livro
+            </summary>
+        </member>
+        <member name="P:Desafio_Backend.Domain.DTO.Livro.LivroAdicionarDto.descricao">
+            <summary>
+            Descrição
+            </summary>
+        </member>
+        <member name="P:Desafio_Backend.Domain.DTO.Livro.LivroAdicionarDto.edicao">
+            <summary>
+            Numero da Edição
+            </summary>
+        </member>
+        <member name="P:Desafio_Backend.Domain.DTO.Livro.LivroAdicionarDto.anoPublicacao">
+            <summary>
+            Ano da Publicação
+            </summary>
+        </member>
+        <member name="P:Desafio_Backend.Domain.DTO.Livro.LivroAdicionarDto.urlCapa">
+            <summary>
+            URL da Imagem de Capa
+            </summary>
+        </member>
+        <member name="P:Desafio_Backend.Domain.DTO.Livro.LivroAdicionarDto.valor">
+            <summary>
+            Valor do Livro
+            </summary>
+        </member>
+        <member name="P:Desafio_Backend.Domain.DTO.Livro.LivroAdicionarDto.avaliacao">
+            <summary>
+            Nota do Livro
+            </summary>
+        </member>
+        <member name="P:Desafio_Backend.Domain.DTO.Livro.LivroAdicionarDto.idAutores">
+            <summary>
+            Lista de ID dos Autores
+            </summary>
+        </member>
+        <member name="P:Desafio_Backend.Domain.DTO.Livro.LivroAdicionarDto.idGenero">
+            <summary>
+            ID do Genero
+            </summary>
+        </member>
+        <member name="P:Desafio_Backend.Domain.DTO.Livro.LivroAdicionarDto.idEditora">
+            <summary>
+            ID da Editora
+            </summary>
+        </member>
+        <member name="T:Desafio_Backend.Domain.DTO.Livro.LivroEditarDto">
+            <summary>
+            Serve como estrutura de entrada para cadastrar a Classe Livro no Banco.
+            </summary>
+        </member>
+        <member name="P:Desafio_Backend.Domain.DTO.Livro.LivroEditarDto.nome">
+            <summary>
+            Nome do Livro
+            </summary>
+        </member>
+        <member name="P:Desafio_Backend.Domain.DTO.Livro.LivroEditarDto.descricao">
+            <summary>
+            Descrição
+            </summary>
+        </member>
+        <member name="P:Desafio_Backend.Domain.DTO.Livro.LivroEditarDto.edicao">
+            <summary>
+            Numero da Edição
+            </summary>
+        </member>
+        <member name="P:Desafio_Backend.Domain.DTO.Livro.LivroEditarDto.anoPublicacao">
+            <summary>
+            Ano da Publicação
+            </summary>
+        </member>
+        <member name="P:Desafio_Backend.Domain.DTO.Livro.LivroEditarDto.urlCapa">
+            <summary>
+            URL da Imagem de Capa
+            </summary>
+        </member>
+        <member name="P:Desafio_Backend.Domain.DTO.Livro.LivroEditarDto.valor">
+            <summary>
+            Valor do Livro
+            </summary>
+        </member>
+        <member name="P:Desafio_Backend.Domain.DTO.Livro.LivroEditarDto.avaliacao">
+            <summary>
+            Nota do Livro
+            </summary>
+        </member>
+        <member name="P:Desafio_Backend.Domain.DTO.Livro.LivroEditarDto.idGenero">
+            <summary>
+            ID do Genero
+            </summary>
+        </member>
+        <member name="P:Desafio_Backend.Domain.DTO.Livro.LivroEditarDto.idEditora">
+            <summary>
+            ID da Editora
+            </summary>
+        </member>
+        <member name="T:Desafio_Backend.Domain.DTO.Livro.LivroFiltrosDto">
+            <summary>
+            Serve como estrutura de entrada para filtrar a Classe Livro no Banco.
+            </summary>
+        </member>
+        <member name="P:Desafio_Backend.Domain.DTO.Livro.LivroFiltrosDto.idAutor">
+            <summary>
+            ID de um dos Autores do Livro Cadastrado no Banco
+            </summary>
+        </member>
+        <member name="P:Desafio_Backend.Domain.DTO.Livro.LivroFiltrosDto.idGenero">
+            <summary>
+            ID do Genero do Livro Cadastrado no Banco
+            </summary>
+        </member>
+        <member name="P:Desafio_Backend.Domain.DTO.Livro.LivroFiltrosDto.idEditora">
+            <summary>
+            ID da Editora do Livro Cadastrada no Banco
+            </summary>
+        </member>
+        <member name="P:Desafio_Backend.Domain.DTO.Livro.LivroFiltrosDto.notaMin">
+            <summary>
+            Valor de Nota minima do Livro
+            </summary>
+        </member>
+        <member name="P:Desafio_Backend.Domain.DTO.Livro.LivroFiltrosDto.notaMax">
+            <summary>
+            Valor de Nota maxima do Livro
+            </summary>
+        </member>
+        <member name="P:Desafio_Backend.Domain.DTO.Livro.LivroFiltrosDto.valorMin">
+            <summary>
+            Valor de Custo minimo do Livro
+            </summary>
+        </member>
+        <member name="P:Desafio_Backend.Domain.DTO.Livro.LivroFiltrosDto.valorMax">
+            <summary>
+            Valor de Custo maximo do Livro
+            </summary>
+        </member>
+        <member name="P:Desafio_Backend.Domain.DTO.Livro.LivroFiltrosDto.edicao">
+            <summary>
+            Numero da Edição do Livro
+            </summary>
+        </member>
+        <member name="P:Desafio_Backend.Domain.DTO.Livro.LivroFiltrosDto.anoPublicacaoMin">
+            <summary>
+            Ano minimo de publicação  do Livro
+            </summary>
+        </member>
+        <member name="P:Desafio_Backend.Domain.DTO.Livro.LivroFiltrosDto.anoPublicacaoMax">
+            <summary>
+            Ano maximo de publicação  do Livro
+            </summary>
+        </member>
+        <member name="M:Desafio_Backend.Infrastructure.Repository.Interfaces.ILivroRepository.ListarTodosAsync(Desafio_Backend.Domain.DTO.Livro.LivroFiltrosDto,System.Int32,System.Int32)">
+            <summary>
+            Método Listar padrão. Recebe uma estrutura para filtrar do banco e devolver uma lista ordenada por Nome.
+            </summary>
+            <param name="filtros">Classe auxiliar de parametros para filtrar Livros</param>
+            <param name="pagina">Numero da Página Atual</param>
+            <param name="numItensPorPagina">Quantidade de Itens na Página</param>
+            <returns>Lista de todos os Livros.</returns>
+        </member>
+        <member name="M:Desafio_Backend.Infrastructure.Repository.Interfaces.ILivroRepository.ObterPorIdAsync(System.Int32)">
+            <summary>
+            Método selecionar padrão. Recebe um identificador para filtrar do banco e devolver uma objeto.
+            </summary>
+            <param name="id">ID do Livro cadastrado no Banco</param>
+            <returns>Livro.</returns>
+            <remarks>Deve ser implementado em cada classe derivada.</remarks>
+        </member>
+        <member name="M:Desafio_Backend.Infrastructure.Repository.Interfaces.ILivroRepository.ObterPorNomeAsync(System.String)">
+            <summary>
+            Método selecionar padrão. Recebe um identificador para filtrar do banco e devolver uma objeto.
+            </summary>
+            <param name="nome">Nome do Livro cadastrado no Banco</param>
+            <returns>Livro.</returns>
+            <remarks>Deve ser implementado em cada classe derivada.</remarks>
+        </member>
+        <member name="M:Desafio_Backend.Infrastructure.Repository.LivroRepository.ListarTodosAsync(Desafio_Backend.Domain.DTO.Livro.LivroFiltrosDto,System.Int32,System.Int32)">
+            <summary>
+            Método Listar padrão. Recebe uma estrutura para filtrar do banco e devolver uma lista ordenada por Nome.
+            </summary>
+            <param name="filtros">Classe auxiliar de parametros para filtrar Livros</param>
+            <param name="pagina">Numero da Página Atual</param>
+            <param name="numItensPorPagina">Quantidade de Itens na Página</param>
+            <returns>Lista de todos os Livros.</returns>
+        </member>
+        <member name="M:Desafio_Backend.Infrastructure.Repository.LivroRepository.FiltrarLivros(System.Linq.IQueryable{Desafio_Backend.Domain.Models.Livro},Desafio_Backend.Domain.DTO.Livro.LivroFiltrosDto)">
+            <summary>
+            Método de Filtrar. Recebe uma Query para filtrar do banco e devolver uma Query com Filtros.
+            </summary>
+            <param name="resultado">Query de Todos os Livros</param>
+            <param name="filtros">Classe auxiliar de parametros para filtrar Livros</param>
+            <returns>Lista de Livros Fitrada.</returns>
+        </member>
+        <member name="M:Desafio_Backend.Infrastructure.Repository.LivroRepository.ObterPorIdAsync(System.Int32)">
+            <summary>
+            Método selecionar padrão. Recebe um identificador para filtrar do banco e devolver uma objeto.
+            </summary>
+            <param name="id">ID do Livro cadastrado no Banco</param>
+            <returns>Livro.</returns>
+            <remarks>Deve ser implementado em cada classe derivada.</remarks>
+        </member>
+        <member name="M:Desafio_Backend.Infrastructure.Repository.LivroRepository.ObterPorNomeAsync(System.String)">
+            <summary>
+            Método selecionar padrão. Recebe um identificador para filtrar do banco e devolver uma objeto.
+            </summary>
+            <param name="nome">Nome do Livro cadastrado no Banco</param>
+            <returns>Livro.</returns>
+            <remarks>Deve ser implementado em cada classe derivada.</remarks>
+        </member>
+    </members>
+</doc>
