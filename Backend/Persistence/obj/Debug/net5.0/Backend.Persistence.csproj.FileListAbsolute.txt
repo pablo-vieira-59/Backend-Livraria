@@ -1,0 +1,15 @@
+C:\Users\pablo\source\repos\Desafio-Backend\Persistence\bin\Debug\net5.0\Backend.Persistence.deps.json
+C:\Users\pablo\source\repos\Desafio-Backend\Persistence\bin\Debug\net5.0\Backend.Persistence.dll
+C:\Users\pablo\source\repos\Desafio-Backend\Persistence\bin\Debug\net5.0\Backend.Persistence.pdb
+C:\Users\pablo\source\repos\Desafio-Backend\Persistence\bin\Debug\net5.0\Backend.Domain.dll
+C:\Users\pablo\source\repos\Desafio-Backend\Persistence\bin\Debug\net5.0\Backend.Domain.pdb
+C:\Users\pablo\source\repos\Desafio-Backend\Persistence\obj\Debug\net5.0\Backend.Persistence.csproj.AssemblyReference.cache
+C:\Users\pablo\source\repos\Desafio-Backend\Persistence\obj\Debug\net5.0\Backend.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pablo\source\repos\Desafio-Backend\Persistence\obj\Debug\net5.0\Backend.Persistence.AssemblyInfoInputs.cache
+C:\Users\pablo\source\repos\Desafio-Backend\Persistence\obj\Debug\net5.0\Backend.Persistence.AssemblyInfo.cs
+C:\Users\pablo\source\repos\Desafio-Backend\Persistence\obj\Debug\net5.0\Backend.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\pablo\source\repos\Desafio-Backend\Persistence\obj\Debug\net5.0\Backend.Persistence.csproj.CopyComplete
+C:\Users\pablo\source\repos\Desafio-Backend\Persistence\obj\Debug\net5.0\Backend.Persistence.dll
+C:\Users\pablo\source\repos\Desafio-Backend\Persistence\obj\Debug\net5.0\refint\Backend.Persistence.dll
+C:\Users\pablo\source\repos\Desafio-Backend\Persistence\obj\Debug\net5.0\Backend.Persistence.pdb
+C:\Users\pablo\source\repos\Desafio-Backend\Persistence\obj\Debug\net5.0\ref\Backend.Persistence.dll
